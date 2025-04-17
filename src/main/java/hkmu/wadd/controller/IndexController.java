@@ -1,18 +1,24 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package hkmu.wadd.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class IndexController {
+    public IndexController() {
+    }
 
-    @GetMapping("/")
+    @GetMapping({"/"})
     public String index() {
         return "redirect:/indexpage/";
     }
 
-    @GetMapping("/login")
+    @GetMapping({"/login"})
     public String login() {
         return "login";
     }
