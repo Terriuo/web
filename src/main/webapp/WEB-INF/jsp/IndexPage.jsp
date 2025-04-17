@@ -47,7 +47,9 @@
   </ul>
 </c:if>
 <security:authorize access="isAuthenticated()">
-<p><a href="<c:url value="/indexpage/add" />">Add Comment</a></p>
+  <p><a href="<c:url value="/indexpage/add" />">Add Comment</a></p>
+  <p><a href="/Project/user/voting-history">View Voting History</a></p>
+  <p><a href="/Project/user/comment-history">View Comment History</a></p>
 </security:authorize>
 </body>
 </html>
