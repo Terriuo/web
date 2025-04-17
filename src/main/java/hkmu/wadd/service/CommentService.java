@@ -1,11 +1,16 @@
-package main.java.hkmu.wadd.service;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package hkmu.wadd.service;
 
 import hkmu.wadd.model.Comment;
+import hkmu.wadd.model.Lecture;
 import hkmu.wadd.repository.CommentRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 
 @Service
 public class CommentService {
@@ -16,14 +21,14 @@ public class CommentService {
     }
 
     public Comment saveComment(Comment comment) {
-        return commentRepository.save(comment);
+        return (Comment)this.commentRepository.save(comment);
     }
 
     public Optional<Comment> getCommentById(Long id) {
-        return commentRepository.findById(id);
+        return this.commentRepository.findById(id);
     }
 
     public List<Comment> getCommentsByLecture(Lecture lecture) {
-        return commentRepository.findByLecture(lecture);
+        return this.commentRepository.findByLecture(lecture);
     }
 }
