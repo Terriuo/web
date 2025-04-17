@@ -1,11 +1,15 @@
-package main.java.hkmu.wadd.service;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package hkmu.wadd.service;
 
 import hkmu.wadd.model.Lecture;
 import hkmu.wadd.repository.LectureRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 
 @Service
 public class LectureService {
@@ -16,14 +20,14 @@ public class LectureService {
     }
 
     public Lecture saveLecture(Lecture lecture) {
-        return lectureRepository.save(lecture);
+        return (Lecture)this.lectureRepository.save(lecture);
     }
 
     public Optional<Lecture> getLectureById(Long id) {
-        return lectureRepository.findById(id);
+        return this.lectureRepository.findById(id);
     }
 
     public List<Lecture> getAllLectures() {
-        return lectureRepository.findAll();
+        return this.lectureRepository.findAll();
     }
 }
