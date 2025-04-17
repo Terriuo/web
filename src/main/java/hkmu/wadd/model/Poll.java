@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package hkmu.wadd.model;
 
 import jakarta.persistence.Entity;
@@ -11,16 +16,25 @@ import java.util.List;
 @Entity
 public class Poll {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+        strategy = GenerationType.IDENTITY
+    )
     private Long id;
     private String question;
-    @OneToMany(mappedBy = "poll")
-    private List<PollOption> options = new ArrayList<>();
-    @OneToMany(mappedBy = "poll")
-    private List<Comment> comments = new ArrayList<>();
+    @OneToMany(
+        mappedBy = "poll"
+    )
+    private List<PollOption> options = new ArrayList();
+    @OneToMany(
+        mappedBy = "poll"
+    )
+    private List<Comment> comments = new ArrayList();
+
+    public Poll() {
+    }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -28,7 +42,7 @@ public class Poll {
     }
 
     public String getQuestion() {
-        return question;
+        return this.question;
     }
 
     public void setQuestion(String question) {
@@ -36,7 +50,7 @@ public class Poll {
     }
 
     public List<PollOption> getOptions() {
-        return options;
+        return this.options;
     }
 
     public void setOptions(List<PollOption> options) {
@@ -44,7 +58,7 @@ public class Poll {
     }
 
     public List<Comment> getComments() {
-        return comments;
+        return this.comments;
     }
 
     public void setComments(List<Comment> comments) {
