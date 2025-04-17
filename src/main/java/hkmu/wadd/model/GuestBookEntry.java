@@ -1,19 +1,31 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package hkmu.wadd.model;
 
-import jakarta.persistence.*;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
-@Table(name = "guestbook")
+@Table(
+    name = "guestbook"
+)
 public class GuestBookEntry {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+        strategy = GenerationType.IDENTITY
+    )
     private Long id;
     private String name;
     private String message;
-
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
@@ -21,7 +33,7 @@ public class GuestBookEntry {
     }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -29,7 +41,7 @@ public class GuestBookEntry {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -37,7 +49,7 @@ public class GuestBookEntry {
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
 
     public void setMessage(String message) {
@@ -45,20 +57,15 @@ public class GuestBookEntry {
     }
 
     public Date getDate() {
-        return date;
+        return this.date;
     }
 
     public void setDate(Date date) {
         this.date = date;
     }
 
-    @Override
     public String toString() {
-        return "GuestBookEntry{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", message='" + message + '\'' +
-                ", date=" + date +
-                '}';
+        Long var10000 = this.id;
+        return "GuestBookEntry{id=" + var10000 + ", name='" + this.name + "', message='" + this.message + "', date=" + String.valueOf(this.date) + "}";
     }
 }
