@@ -1,16 +1,26 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package hkmu.wadd.model;
 
-import jakarta.persistence.*;
-
-import java.util.Date;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
+@Table(
+    name = "users"
+)
 public class UsersEntry {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(
+        strategy = GenerationType.UUID
+    )
     private UUID id;
     private String username;
     private String password;
@@ -19,8 +29,11 @@ public class UsersEntry {
     private String phonenumber;
     private String role;
 
+    public UsersEntry() {
+    }
+
     public UUID getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(UUID id) {
@@ -28,7 +41,7 @@ public class UsersEntry {
     }
 
     public String getUsername() {
-        return username;
+        return this.username;
     }
 
     public void setUsername(String username) {
@@ -36,7 +49,7 @@ public class UsersEntry {
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public void setPassword(String password) {
@@ -44,7 +57,7 @@ public class UsersEntry {
     }
 
     public String getFullname() {
-        return fullname;
+        return this.fullname;
     }
 
     public void setFullname(String fullname) {
@@ -52,7 +65,7 @@ public class UsersEntry {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -60,7 +73,7 @@ public class UsersEntry {
     }
 
     public String getPhonenumber() {
-        return phonenumber;
+        return this.phonenumber;
     }
 
     public void setPhonenumber(String phonenumber) {
@@ -68,23 +81,15 @@ public class UsersEntry {
     }
 
     public String getRole() {
-        return role;
+        return this.role;
     }
 
     public void setRole(String role) {
         this.role = "ROLE_USER";
     }
 
-    @Override
     public String toString() {
-        return "UserEntry{" +
-                "id='" + id + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", fullname='" + fullname + '\'' +
-                ", email='" + email + '\'' +
-                ", phonenumber='" + phonenumber + '\'' +
-                ", role='" + role +
-                '}';
+        String var10000 = String.valueOf(this.id);
+        return "UserEntry{id='" + var10000 + "', username='" + this.username + "', password='" + this.password + "', fullname='" + this.fullname + "', email='" + this.email + "', phonenumber='" + this.phonenumber + "', role='" + this.role + "}";
     }
 }
