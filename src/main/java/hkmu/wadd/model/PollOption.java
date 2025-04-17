@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package hkmu.wadd.model;
 
 import jakarta.persistence.Entity;
@@ -9,15 +14,20 @@ import jakarta.persistence.ManyToOne;
 @Entity
 public class PollOption {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+        strategy = GenerationType.IDENTITY
+    )
     private Long id;
     private String optionText;
     private int voteCount;
     @ManyToOne
     private Poll poll;
 
+    public PollOption() {
+    }
+
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -25,7 +35,7 @@ public class PollOption {
     }
 
     public String getOptionText() {
-        return optionText;
+        return this.optionText;
     }
 
     public void setOptionText(String optionText) {
@@ -33,7 +43,7 @@ public class PollOption {
     }
 
     public int getVoteCount() {
-        return voteCount;
+        return this.voteCount;
     }
 
     public void setVoteCount(int voteCount) {
@@ -41,7 +51,7 @@ public class PollOption {
     }
 
     public Poll getPoll() {
-        return poll;
+        return this.poll;
     }
 
     public void setPoll(Poll poll) {
