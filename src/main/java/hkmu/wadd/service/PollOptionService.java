@@ -1,11 +1,16 @@
-package main.java.hkmu.wadd.service;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
 
+package hkmu.wadd.service;
+
+import hkmu.wadd.model.Poll;
 import hkmu.wadd.model.PollOption;
 import hkmu.wadd.repository.PollOptionRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 
 @Service
 public class PollOptionService {
@@ -16,14 +21,14 @@ public class PollOptionService {
     }
 
     public PollOption savePollOption(PollOption pollOption) {
-        return pollOptionRepository.save(pollOption);
+        return (PollOption)this.pollOptionRepository.save(pollOption);
     }
 
     public Optional<PollOption> getPollOptionById(Long id) {
-        return pollOptionRepository.findById(id);
+        return this.pollOptionRepository.findById(id);
     }
 
     public List<PollOption> getPollOptionsByPoll(Poll poll) {
-        return pollOptionRepository.findByPoll(poll);
+        return this.pollOptionRepository.findByPoll(poll);
     }
 }
